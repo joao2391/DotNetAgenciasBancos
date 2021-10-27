@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNet.Agencias.Bancos</name>
+    </assembly>
+    <members>
+        <member name="T:DotNet.Agencias.Bancos.Agencia">
+            <summary>
+            Classe Agencia
+            </summary>
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencia.InstituicaoFinanceira">
+            <summary>
+            Nome da Instituição Financeira
+            </summary>
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencia.Segmento">
+            <summary>
+            Segmento da Instituição Financeira
+            </summary>
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencia.NomeAgencia">
+            <summary>
+            Nome da Agência
+            </summary>
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencia.Endereco">
+            <summary>
+            Endereço da Agência
+            </summary>
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencia.Numero">
+            <summary>
+            Número da Agência
+            </summary>
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencia.Complemento">
+            <summary>
+            Complemento
+            </summary>
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencia.Bairro">
+            <summary>
+            Bairro
+            </summary>
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencia.Cep">
+            <summary>
+            CEP
+            </summary>
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencia.Municipio">
+            <summary>
+            Município
+            </summary>
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencia.Uf">
+            <summary>
+            UF do Estado
+            </summary>        
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencia.Telefone">
+            <summary>
+            Telefone
+            </summary>
+        </member>
+        <member name="T:DotNet.Agencias.Bancos.Agencias">
+            <summary>
+            Classe Agências
+            </summary>
+        </member>
+        <member name="P:DotNet.Agencias.Bancos.Agencias.Value">
+            <summary>
+            Array de valores retornados do tipo Agencia
+            </summary>
+        </member>
+        <member name="T:DotNet.Agencias.Bancos.AgenciasBancos">
+            <summary>
+            Classe com função que busca informaçãoes das agências dos Bancos.
+            </summary>
+        </member>
+        <member name="M:DotNet.Agencias.Bancos.AgenciasBancos.#ctor(DotNet.Agencias.Bancos.IHttpClientWrapper)">
+            <summary>
+            Construtor para instanciar a classe HttpClientWrapper via injeção de dependência.
+            </summary>
+            <param name="httpClientWrapper">Objeto HttpClientWrapper</param>
+        </member>
+        <member name="M:DotNet.Agencias.Bancos.AgenciasBancos.GetAgenciasByCepAsync(System.String,System.Int32)">
+            <summary>
+            Busca as agências localizadas de acordo com
+            o CEP informado.
+            </summary>
+            <param name="cep">CEP.</param>
+            <param name="quantidadeRetorno">Quantidade de itens.</param>
+            <returns cref="T:DotNet.Agencias.Bancos.Agencias">Objeto do tipo Agencias</returns>
+            <exception cref="T:System.Net.Http.HttpRequestException">HttpRequestException</exception>
+            <exception cref="T:Newtonsoft.Json.JsonSerializationException">JsonSerializationException</exception>
+            <exception cref="T:System.ArgumentNullException">ArgumentNullException</exception>
+        </member>
+        <member name="M:DotNet.Agencias.Bancos.AgenciasBancos.GetAgenciasByMunicipioAsync(System.String,System.Int32)">
+            <summary>
+            Busca as agências localizadas de acordo com
+            o município informado.
+            </summary>
+            <param name="municipio">Município.</param>
+            <param name="quantidadeRetorno">Quantidade de itens.</param>
+            <returns cref="T:DotNet.Agencias.Bancos.Agencias">Objeto do tipo Agencias</returns>
+            <exception cref="T:System.Net.Http.HttpRequestException">HttpRequestException</exception>
+            <exception cref="T:Newtonsoft.Json.JsonSerializationException">JsonSerializationException</exception>
+            <exception cref="T:System.ArgumentNullException">ArgumentNullException</exception>
+        </member>
+        <member name="M:DotNet.Agencias.Bancos.AgenciasBancos.GetAgenciasByMunicipioEBancoAsync(System.String,System.String,System.Int32)">
+            <summary>
+            Busca as agências localizadas de acordo com
+            o Municipio e Banco informados.
+            </summary>
+            <param name="municipio">Município da Agência</param>
+            <param name="nomeBanco">Nome do Banco.</param>
+            <param name="quantidadeRetorno">Quantidade de itens.</param>
+            <returns cref="T:DotNet.Agencias.Bancos.Agencias">Objeto do tipo Agencias</returns>
+            <exception cref="T:System.Net.Http.HttpRequestException">HttpRequestException</exception>
+            <exception cref="T:Newtonsoft.Json.JsonSerializationException">JsonSerializationException</exception>
+            <exception cref="T:System.ArgumentNullException">ArgumentNullException</exception>
+        </member>
+        <member name="T:DotNet.Agencias.Bancos.HttpClientWrapper">
+            <summary>
+            Classe utilizada para abstrair as chamadas HTTP
+            </summary>
+        </member>
+        <member name="M:DotNet.Agencias.Bancos.HttpClientWrapper.#ctor">
+            <summary>
+            Construtor padrão
+            </summary>
+        </member>
+        <member name="M:DotNet.Agencias.Bancos.HttpClientWrapper.GetAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Realiza a chamada GET para a url
+            do BACEN
+            </summary>
+            <param name="requestMessage">Objeto da Requisição</param>
+            <returns>Task de HttpResponseMessage</returns>
+        </member>
+        <member name="T:DotNet.Agencias.Bancos.IAgenciasBancos">
+            <summary>
+            Interface para a classe AgenciasBancos
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DotNet.Agencias.Bancos.IAgenciasBancos.GetAgenciasByMunicipioAsync(System.String,System.Int32)" -->
+        <member name="M:DotNet.Agencias.Bancos.IAgenciasBancos.GetAgenciasByMunicipioEBancoAsync(System.String,System.String,System.Int32)">
+            <summary>
+            Busca as agências localizadas de acordo com
+            o Municipio e Banco informados.
+            </summary>
+            <param name="municipio">Município da Agência</param>
+            <param name="nomeBanco">Nome do Banco.</param>
+            <param name="quantidadeRetorno">Quantidade de itens.</param>
+            <returns cref="T:DotNet.Agencias.Bancos.Agencias">Objeto do tipo Agencias</returns>
+        </member>
+        <member name="M:DotNet.Agencias.Bancos.IAgenciasBancos.GetAgenciasByCepAsync(System.String,System.Int32)">
+            <summary>
+            Busca as agências localizadas de acordo com
+            o CEP informado.
+            </summary>
+            <param name="cep">CEP.</param>
+            <param name="quantidadeRetorno">Quantidade de itens.</param>
+            <returns cref="T:DotNet.Agencias.Bancos.Agencias">Objeto do tipo Agencias</returns>
+        </member>
+        <member name="T:DotNet.Agencias.Bancos.IHttpClientWrapper">
+            <summary>
+            Interface do HttpClientWrapper
+            </summary>
+        </member>
+        <member name="M:DotNet.Agencias.Bancos.IHttpClientWrapper.GetAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Método responsável por chamar a url
+            dos Correios.
+            </summary>        
+            <param name="requestMessage">Objeto da Requisição</param>
+            <returns>Task de HttpResponseMessage</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,31 @@
+{
+  "@odata.context": "https://was-p.bcnet.bcb.gov.br/olinda/servico/Informes_Agencias/versao/v1/odata$metadata#Agencias(NomeIf,Segmento,NomeAgencia,Endereco,Numero,Complemento,Bairro,Cep,Municipio,UF,Telefone)",
+  "value": [
+    {
+      "NomeIf": "BANCO SANTANDER (BRASIL) S.A.",
+      "Segmento": "Banco Múltiplo",
+      "NomeAgencia": "001-1802 SELECT MOOCA-SP",
+      "Endereco": "AV PAES DE BARROS",
+      "Numero": "2621",
+      "Complemento": "",
+      "Bairro": "MOOCA",
+      "Cep": "03114-000",
+      "Municipio": "SAO PAULO",
+      "UF": "SP",
+      "Telefone": "23929400"
+    },
+    {
+      "NomeIf": "BANCO BTG PACTUAL S.A.",
+      "Segmento": "Banco Múltiplo",
+      "NomeAgencia": "GEMINI",
+      "Endereco": "AV. BRIGADEIRO FARIA LIMA",
+      "Numero": "001384",
+      "Complemento": "9º ANDAR",
+      "Bairro": "ITAIM BIBI",
+      "Cep": "00000-000",
+      "Municipio": "SAO PAULO",
+      "UF": "SP",
+      "Telefone": "33832000"
+    }
+  ]
+}
