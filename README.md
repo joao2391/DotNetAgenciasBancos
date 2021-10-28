@@ -24,20 +24,46 @@ services.<ChooseYours><IAgenciasBancos, AgenciasBancos>();
 ```
 
 ### Features
-You will get an object with an object's array with Nome, CEP, Endereço and Situação
 ```C#
-var agencias = GetAgenciasAsync();
-// agencias.Value[0].InstituicaoFinanceira -> BANCO SANTANDER (BRASIL) S.A.
-// agencias.Value[0].Segmento -> Banco Múltiplo
-// agencias.Value[0].NomeAgencia -> 001-1802 SELECT MOOCA-SP
-// agencias.Value[0].Endereco -> AV PAES DE BARROS
-// agencias.Value[0].Numero -> 2621
-// agencias.Value[0].Complemento -> ""
-// agencias.Value[0].Bairro -> MOOCA
-// agencias.Value[0].Cep -> 03114-000
-// agencias.Value[0].Municipio -> SAO PAULO
-// agencias.Value[0].Uf -> SP
-// agencias.Value[0].Telefone -> 23929400
+var agenciasByCep = await GetAgenciasByCepAsync("03114-000", 10);
+// agenciasByCep.Value[0].InstituicaoFinanceira -> BANCO SANTANDER (BRASIL) S.A.
+// agenciasByCep.Value[0].Segmento -> Banco Múltiplo
+// agenciasByCep.Value[0].NomeAgencia -> 001-1802 SELECT MOOCA-SP
+// agenciasByCep.Value[0].Endereco -> AV PAES DE BARROS
+// agenciasByCep.Value[0].Numero -> 2621
+// agenciasByCep.Value[0].Complemento -> ""
+// agenciasByCep.Value[0].Bairro -> MOOCA
+// agenciasByCep.Value[0].Cep -> 03114-000
+// agenciasByCep.Value[0].Municipio -> SAO PAULO
+// agenciasByCep.Value[0].Uf -> SP
+// agenciasByCep.Value[0].Telefone -> 23929400
+
+var agenciasByMunicipio = await GetAgenciasByMunicipioAsync("SAO PAULO", 10);
+// agenciasByMunicipio.Value[0].InstituicaoFinanceira -> BANCO SANTANDER (BRASIL) S.A.
+// agenciasByMunicipio.Value[0].Segmento -> Banco Múltiplo
+// agenciasByMunicipio.Value[0].NomeAgencia -> 001-1802 SELECT MOOCA-SP
+// agenciasByMunicipio.Value[0].Endereco -> AV PAES DE BARROS
+// agenciasByMunicipio.Value[0].Numero -> 2621
+// agenciasByMunicipio.Value[0].Complemento -> ""
+// agenciasByMunicipio.Value[0].Bairro -> MOOCA
+// agenciasByMunicipio.Value[0].Cep -> 03114-000
+// agenciasByMunicipio.Value[0].Municipio -> SAO PAULO
+// agenciasByMunicipio.Value[0].Uf -> SP
+// agenciasByMunicipio.Value[0].Telefone -> 23929400
+
+var agenciasByMunicipioEBanco = await GetAgenciasByMunicipioEBancoAsync("SAO PAULO", "SANTANDER", 10);
+// agenciasByMunicipioEBanco.Value[0].InstituicaoFinanceira -> BANCO SANTANDER (BRASIL) S.A.
+// agenciasByMunicipioEBanco.Value[0].Segmento -> Banco Múltiplo
+// agenciasByMunicipioEBanco.Value[0].NomeAgencia -> 001-1802 SELECT MOOCA-SP
+// agenciasByMunicipioEBanco.Value[0].Endereco -> AV PAES DE BARROS
+// agenciasByMunicipioEBanco.Value[0].Numero -> 2621
+// agenciasByMunicipioEBanco.Value[0].Complemento -> ""
+// agenciasByMunicipioEBanco.Value[0].Bairro -> MOOCA
+// agenciasByMunicipioEBanco.Value[0].Cep -> 03114-000
+// agenciasByMunicipioEBanco.Value[0].Municipio -> SAO PAULO
+// agenciasByMunicipioEBanco.Value[0].Uf -> SP
+// agenciasByMunicipioEBanco.Value[0].Telefone -> 23929400
+
 ```
 
 ## Contributing
