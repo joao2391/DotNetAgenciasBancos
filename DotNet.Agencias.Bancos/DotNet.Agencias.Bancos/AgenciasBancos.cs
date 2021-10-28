@@ -31,7 +31,7 @@ namespace DotNet.Agencias.Bancos
         /// <exception cref="HttpRequestException">HttpRequestException</exception>
         /// <exception cref="JsonSerializationException">JsonSerializationException</exception>
         /// <exception cref="ArgumentNullException">ArgumentNullException</exception>
-        public async Task<Agencias> GetAgenciasByCepAsync(string cep, int quantidadeRetorno)
+        public async Task<Agencias> GetAgenciasByCepAsync(string cep, int quantidadeRetorno = 1)
         {
             if (string.IsNullOrEmpty(cep))
             {
@@ -102,7 +102,7 @@ namespace DotNet.Agencias.Bancos
         /// <exception cref="HttpRequestException">HttpRequestException</exception>
         /// <exception cref="JsonSerializationException">JsonSerializationException</exception>
         /// <exception cref="ArgumentNullException">ArgumentNullException</exception>
-        public async Task<Agencias> GetAgenciasByMunicipioEBancoAsync(string municipio, string nomeBanco, int quantidadeRetorno)
+        public async Task<Agencias> GetAgenciasByMunicipioEBancoAsync(string municipio, string nomeBanco, int quantidadeRetorno = 1)
         {
             if (string.IsNullOrEmpty(municipio))
             {
