@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
 	  <Authors>João Paulo de Castro Lima</Authors>
 	  <Company>joao2391</Company>
 	  <Product>DotNetAgenciasBancos</Product>
@@ -15,7 +15,7 @@
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <PackageProjectUrl>https://github.com/joao2391/DotNetAgenciasBancos</PackageProjectUrl>
 	  <RepositoryType>Git</RepositoryType>
-	  <Version>1.0.0</Version>
+	  <Version>1.0.1</Version>
 	  <!-- Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
 	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
 
