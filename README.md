@@ -3,16 +3,16 @@
 DotNet.Agencias.Bancos is a .Net library that helps you to get brazilian's bank agencies
 
 ## Notes
-Version 1.0.1:
+Version 2.0.0:
 
-- Upgrade to .NET 6
+- Upgrade to .NET 9
 
 ## Installation
 
 Use the package manager to install.
 
 ```bash
-Install-Package DotNetAgenciasBancos  -Version 1.0.1
+Install-Package DotNetAgenciasBancos  -Version 2.0.0
 ```
 
 ## Usage
