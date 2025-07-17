@@ -15,7 +15,7 @@ namespace DotNet.Agencias.Bancos.Test
 
         public AgenciasBancosTests()
         {
-            fakeContent = File.ReadAllText(@".\FakeData.json");
+            fakeContent = File.ReadAllText(@"./FakeData.json");
         }
 
         [Fact]
